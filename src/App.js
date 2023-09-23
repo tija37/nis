@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card';
+import Notifications from './components/Notifications';
+import Naslov from './components/Naslov';
+import Pocetna1 from './pages/Pocetna1';
+import SviProizvodi from './pages/SviProizvodi'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Naslov/>
+        <Routes>
+          <Route path='/' element={<Pocetna1 />}/>
+          <Route path='/svi' element={<SviProizvodi />}/>
+          <Route path='/igrica' element={<SviProizvodi />}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

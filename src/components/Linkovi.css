@@ -1,0 +1,14 @@
+a,a:hover,a::after{
+    color: white;
+    text-decoration: none;
+}
+
+.link{
+    color: white;
+    text-align: center;
+}
+
+.linkovi{
+    margin-top:1.3em;
+    margin-bottom:1.3em;
+}
