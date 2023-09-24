@@ -22,7 +22,7 @@ const variants = {
 
 function Notifications(){
     const [notifikacija, setNotifikacija] = useState({
-        naslov : 'Zapocni tocenje',
+        naslov : 'ZAPOCNI TOCENJE',
         opis : 'Ostavi telefon u automobilu i zapocni tocenje goriva na uobicajen nacin'
     });
     const [pozicija,setPozicija] = useState(0);
@@ -31,22 +31,22 @@ function Notifications(){
         setPozicija(pozicija+1);
         setTimeout(()=>{
             setNotifikacija({
-                naslov : 'Tocenje u toku',
-                opis : 'Ostavi telefon u automobilu i zapocni tocenje goriva na uobicajen nacin'
+                naslov : 'TOCENJE U TOKU',
+                opis : 'Ostavi telefon u automobilu i započni točenje goriva na uobičajen način'
             });
         },5000);
     }else if(pozicija==1){
         setPozicija(pozicija+1);
         setTimeout(()=>{
             setNotifikacija({
-                naslov : 'Zavrseno tocenje',
-                opis : 'Ostavi telefon u automobilu i zapocni tocenje goriva na uobicajen nacin'
+                naslov : 'ZAVRSENO TOCENJE',
+                opis : 'Ostavi telefon u automobilu i započni točenje goriva na uobičajen način'
             });
-        },15000);
+        },35000);
     }
 
     return(
-        <>
+        <div className='notKomp'>
             <div className='dugmence'>
                 <button className='odustani'>
                     Odustani
@@ -71,7 +71,7 @@ function Notifications(){
                 </button>
             </div>
 
-        </>
+        </div>
     );
 }
 

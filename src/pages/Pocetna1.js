@@ -9,7 +9,7 @@ function Pocetna1(){
     const linkovi = [
         {
             link : '/svi',
-            tekst : 'Prikazi kompletnu Drive.Gone ponudu'
+            tekst : 'Prikaži kompletnu Drive.Gone ponudu'
         },
         {
             link : '/igrica',
@@ -40,8 +40,6 @@ function Pocetna1(){
             }
             
             <Linkovi niz = {linkovi} />
-
-            <Notifications/>
         </>
 
     );

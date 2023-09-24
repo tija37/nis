@@ -1,0 +1,81 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {width: 100%; height: 100vh;}
+.center {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 4px solid #89191A;
+  border-radius: 15%;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  cursor:pointer;
+}
+.wave {
+  background-color: #89191A;
+  position: absolute;
+  top: 100%;
+  height: 200%;
+  width: 200%;
+  border-radius: 38%;
+  left: -50%;
+  transform: rotate(360deg);
+  transition: all 0.2s ease;
+  animation: wave 27s linear infinite;
+}
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(3600deg); }
+}
+.circle:hover .wave {
+  top: 0%;
+}
+
+.kontrole{
+  text-align: center;
+  position: absolute;
+  top: 55%;
+  z-index: 100;
+  left: 30%;
+  width: 40%;
+}
+
+.kontrole>p{
+  font-size: 15pt;
+  font-weight: bold;
+  color: white;
+  margin: 5px auto;
+}
+
+.kontrole>h2{
+  font-size: 25pt;
+  font-weight: bold;
+  margin: 5px auto;
+}
+
+.cep{
+  width: 45%;
+  margin-left: 50%;
+}
+
+.kontrole>.dugme{
+  padding: 6px;
+}
+
+.podNa{
+  color: white;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 8%;
+}
